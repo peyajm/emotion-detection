@@ -1,1 +1,14 @@
 imfdb dataset images
+code to change names of images in a folder:
+
+import os
+
+def rename(directory):
+    for name in os.listdir(directory):
+        print(name)
+        os.rename(os.path.join(directory,name), 
+                  os.path.join(directory,'MalikarjunRao_'+name))
+
+
+path = "C:\\Users\\minij\\Desktop\\Emotion Detection\\IMFDB_final\\IMFDB_final\\MalikarjunRao\\Gajarajayom\\images"
+rename(path)
